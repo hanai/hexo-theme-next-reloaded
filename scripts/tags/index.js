@@ -35,6 +35,8 @@ const mermaid = require('./mermaid');
 
 hexo.extend.tag.register('mermaid', mermaid, true);
 
+hexo.extend.tag.register('drawio', require('./drawio'));
+
 const postNote = require('./note')(hexo);
 
 hexo.extend.tag.register('note', postNote, true);
