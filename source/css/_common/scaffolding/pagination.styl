@@ -1,11 +1,17 @@
 $page-number-basic {
   display: inline-block;
-  margin: -1px 10px 0 10px;
+  margin: -1px 10px 0;
   padding: 0 10px;
 
   +mobile() {
     margin: 0 5px;
   }
+}
+
+$page-number-current {
+  background: $pagination-active-bg;
+  border-color: $pagination-active-border;
+  color: $pagination-active-color;
 }
 
 .pagination {
@@ -44,8 +50,6 @@ $page-number-basic {
   }
 
   .page-number.current {
-    background: $pagination-active-bg;
-    border-color: $pagination-active-border;
-    color: $pagination-active-color;
+    @extend $page-number-current;
   }
 }

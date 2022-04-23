@@ -35,15 +35,23 @@
   }
 }
 
-.sidebar-panel {
-  display: none;
-  max-height: var(--sidebar-wrapper-height);
+// Need for Sidebar/TOC inner scrolling if content taller then viewport.
+.sidebar-panel-container {
+  flex: 1;
   overflow-x: hidden;
   overflow-y: auto;
 }
 
-.sidebar-toc-active .post-toc-wrap, .sidebar-overview-active .site-overview-wrap {
+.sidebar-panel {
+  display: none;
+}
+
+.sidebar-overview-active .site-overview-wrap {
   // Flexbox layout makes it possible to reorder the child
   // elements of .site-overview-item through the `order` CSS property
   flex-column();
+}
+
+.sidebar-toc-active .post-toc-wrap {
+  display: block;
 }
